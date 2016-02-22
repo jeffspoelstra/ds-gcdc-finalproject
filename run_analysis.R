@@ -99,7 +99,7 @@ HARresults<-gather(mean_dat, meas, value, -activity, -subject) %>%
     rename(aggmean=mean, meanstd=std)
 
 # Save the results on disk.
-write.table(HARresults, "HARresults.txt", col.names=TRUE)
+write.table(HARresults, "HARresults.txt", col.names=TRUE, row.names=FALSE)
 
 # Clean up all intermediate variables, leaving only the final HARresults data frame in
 # the environment.
